@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=" UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./xfy.css">
+    <title>vue</title>
+    <script src="./vue.js"></script>
+<!-- 这是开发版本 直接引入 -->
+</head>
+<body>
+    
+    <div id="app">
+        <p>{{ msg }}</p>
+        <p>{{nickname}}</p>
+        <p>{{nickname + '你好'}}</p>
+        <p>{{age >= 18? '成年' :'不成年'}}</p>
+        <p>{{a.name}}</p>
+        <p>{{a.desc}}</p>
+        
+    </div>
+    
+    <script>
+        const app =new Vue({
+            el:'#app',
+            data:{
+                msg:'利用表达式插值，渲染到页面中',
+                nickname:'win',
+                age:18,
+                a:{
+                   name:'js',
+                   desc:'学vue',
+                }
+               
+            }
+            
+            
+        })
+    </script>
+
+</body>
+    
+</html>
