@@ -1,0 +1,31 @@
+<!-- 轮播图 -->
+<swiper indicator-dots="ture" indicator-color="black" indicator-active-color="#fff" autoplay="ture" interval="5" circular="ture">
+<!-- 第一个是面板指示点 color是没激活的颜色 active是激活的 autoplay是是否自动切换 interval是切换间隔 circular是衔接第一张 -->
+  <swiper-item>
+    <view class="item">a</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">a</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">a</view>
+  </swiper-item>
+</swiper>
+
+<view>
+   手机selectable上支持长按选中效果 
+   <text selectable="ture">183090960</text>
+   <rich-text nodes="<h1>biaoti</h1>"/>
+   <!-- 可以用html中的一些标签 -->
+   
+  <button type="primary">主色调绿地</button>
+  <button type="default" size="mini">字是绿地</button>
+  <button type="warn" plain="ture">警告 镂空</button>
+
+  <image src="./image/屏幕截图(1).png" mode="aspectFit"/>
+  <image src="./image/屏幕截图(1).png" mode="aspectFill"/>
+  <image src="./image/屏幕截图(1).png" mode="aspectFit"/>
+  <!-- 缩放 fit保证长边能完整显示出来 fill保证短边铺满 widthfix高度调整 hight同理 scaletofill默认 -->
+
+
+</view>

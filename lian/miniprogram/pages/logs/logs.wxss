@@ -1,0 +1,6 @@
+.item{
+  height: 100%;
+  line-height: 150px;
+  /* 纵向行高 */
+  text-align: center;
+}
