@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=" UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./xfy.css">
+    <title>vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./vue.js"></script>
+<!-- 用./vue.js，否则用网址会报错但怎么改不清楚，而且那个vue.js需要放入文件夹中 -->
+</head>
+<body>
+    
+
+    <div id="app">
+        <h1>{{ message }}</h1>
+        <button @click="getData">Get Data</button>
+    </div>
+    <script type="text/javascript">
+        var app = new Vue({
+            el:'#app',
+            data: {
+                message: 'Hello Vue!'
+            },
+            methods: {
+                getData: function() {
+                    // 使用axios 或其他库发送 HTTP 请求获取后端数据
+                    axios.get('/api/data')
+                        .then(response => {
+                            this.message = response.data.message;
+                        })
+                        .catch(error => {
+                            this.message = "test ok";
+                        });
+                }
+            }
+        });
+    </script>
+    <!-- script要放在div后面，等页面渲染完了再启动js不然会报错 -->
+</body>
+</html>
